@@ -43,3 +43,26 @@ console.log(typeof bigNumber);
 // object(native and does not implement[[call]]) ===> object
 // object(native or host and does not implement[[call]]) ===> function
 // object(host and does not implement[[call]]) ===> implementation-defined except may not be "undefined","boolean","number",or"string
+
+
+// Stack (primitive), Heap (Non-Primitive)  =>  reference
+
+
+let myYoutubename = "shekhar Suman"
+
+let anothername = myYoutubename
+anothername = "Chai aur Code"
+console.log(myYoutubename);
+console.log(anothername);
+
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ybl"
+}
+
+let userTwo = userOne
+
+userTwo.email = "shekhar@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
