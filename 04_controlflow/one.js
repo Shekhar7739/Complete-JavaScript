@@ -55,12 +55,3 @@ if (userLoggedIn && debitCard && 2==2) {
 if (loggedInWithGoogle || loggedInWithEmail) {
     console.log("You can login");
 }
-const isLoggedIn = true;
-const hasPaymentToken = true;
-const isGuest = false;
-
-if ((isLoggedIn && hasPaymentToken) || isGuest) {
-    console.log("You can make a purchase");
-} else {
-    console.log("Please log in or provide payment information");
-}
