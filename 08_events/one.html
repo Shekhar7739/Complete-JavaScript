@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="dog" src="https://images.pexels.com/photos/29590677/pexels-photo-29590677.jpeg" alt="dog"></li>
+            <li><img width="200px" id="flower" src=https://images.pexels.com/photos/20269668/pexels-photo-20269668.jpeg alt=""></li>
+            <li><img width="200px" id="hourse" src=https://images.pexels.com/photos/30919014/pexels-photo-30919014.png alt=""></li>
+            <li><img width="200px" id="chai" src=https://images.pexels.com/photos/18488473/pexels-photo-18488473.jpeg alt=""></li>
+            <li><img width="200px" id="mountain" src=https://images.pexels.com/photos/36681919/pexels-photo-36681919.png alt=""></li>
+            <li><a style="color: aliceblue;" href="https://www.google.com/" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById("dog").onclick = function() {
+    //     alert("You clicked on the dog image!");
+    // };
+    //  attachEvent() method is used in older versions of Internet Explorer (IE 8 and earlier) to attach event handlers to elements. It is not supported in modern browsers and should be avoided in favor of addEventListener() for better compatibility and performance.
+    // jQuery's click() method is a convenient way to attach a click event handler to elements. It abstracts away the differences between browsers and provides a simple syntax for handling events. However, it requires including the jQuery library in your project, which may not be necessary for simple event handling tasks. Using addEventListener() is generally recommended for better performance and to avoid unnecessary dependencies.
+    //  type, timestamp, target, currentTarget, eventPhase, bubbles, cancelable, defaultPrevented, isTrusted, toElement, srcElement, currentTarget, clientX, clientY, screenX, screenY, altKey, ctrlKey, shiftKey, metaKey, etc.
+    document.getElementById('images').addEventListener('click', function(e) {
+        // console.log("You clicked inside the ul");
+    }, false);
+    
+    // document.getElementById('flower').addEventListener('click', function(e) {
+    //     // console.log("You clicked on the flower image");
+    //     e.stopPropagation();
+    // }, false);
+    document.getElementById('google').addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation
+        // console.log("You clicked on the Google link");
+    }, false);
+
+    document.querySelector('#images').addEventListener('click', function(e) {
+        console.log(e.target.parentNode);
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode;
+            // removeIt.parentNode.removeChild(removeIt);
+            removeIt.remove();
+        }
+    }, false);
+
+</script>
+</html>
