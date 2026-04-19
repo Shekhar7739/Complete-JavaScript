@@ -35,9 +35,13 @@ function User(username, loginCount, signedIn) {
     this.loginCount = loginCount;
     this.signedIn = signedIn;
 
+    this.greeting = function () {
+        console.log(`Welcome ${this.username}`);
+    }
+
     return this
 }
 const userOne = new User("Shekhar", 25, true);
 const userTwo = new User("Chai", 30, false);
-console.log(userOne);
+console.log(userOne.constructor);
 console.log(userTwo);
