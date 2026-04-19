@@ -84,7 +84,7 @@ const promiseFive = new Promise(function (resolve, reject) {
 // }
 
 // getAllUsers();
-fetch('https://jsonplaceholder.typicode.com/users')
+fetch('https://api.github.com/users')
 .then((responce) => {
     return responce.json();
 })
